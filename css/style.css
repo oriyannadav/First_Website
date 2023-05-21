@@ -1,0 +1,296 @@
+/* Base HTML Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+	--pink: #f38fb1;
+	--yellow: #f4d040;
+	--green: #57d68d;
+	--blue: #5dade2;
+	--black: #111111;
+	--gray: #c3c3c3;
+}
+
+/* CSS Reset */
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: 'Inter', sans-serif;
+	color: var(--black);
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Global Styles */
+
+label, input, select, textarea, area {
+    display: block;
+    width: 100%;
+}
+
+input, select, textarea {
+    padding: 8px;
+}
+
+/* components */
+
+.btn-primary, .btn-secondary {
+    padding: 16px 24px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--black);
+    border-radius: 4px;
+}
+
+.btn-primary{
+    background-color: white;
+    transition: all 0.6s ease;
+}
+
+.btn-primary:hover {
+    outline: 1px solid var(--black);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    /* transform: translateY(-4px); */
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid white;
+    transition: all 0.6s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Header */
+
+.desktop-nav {
+    display: none;
+} 
+
+.mobile-nav a {
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+    text-align: end;
+    padding: 4px 16px;
+    cursor: pointer;
+}
+
+header button {
+    all: unset;
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header a {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    nav {
+        display: inline-block;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 24px;
+        margin-right: 16px;
+    }
+
+    .hamburger-icon {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none;
+    } 
+}
+
+.logo, .hamburger-icon {
+    height: 50px;
+}
+
+.mobile-header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* hero */
+
+#hero {
+    background-color: var(--pink);
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding: 16px;
+}
+
+#hero h1{
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    #hero {
+        padding: 120px 56px;
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+        max-width: 70%;
+    }
+}
+
+#hero .hero-accent {
+    color: white;
+}
+
+/* Workshops Articles */
+
+@media (min-width: 768px) {
+    #courses {
+        display: flex;
+    }
+
+    #courses article {
+        padding: 56px;
+    }
+}
+
+#courses article {
+    padding: 32px 16px;
+}
+
+#courses article .icon {
+    height: 24px;
+}
+
+#courses article h2 {
+    margin-bottom: 16px;
+    color: white;
+}
+
+#courses article p {
+    margin-bottom: 16px;
+}
+
+#courses .workshops {
+    background-color: var(--yellow);
+}
+
+#courses .flash {
+    background-color: var(--green);
+}
+
+#courses .plus {
+    background-color: var(--blue);
+}
+
+/* Contact Section */
+
+#contact {
+    padding: 48px 16px;
+}
+
+#contact input, #contact select {
+    margin-bottom: 16px;
+}
+
+#contact h2 {
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    #contact h2 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    #contact form {
+        max-width: 60%;
+        margin: 40px auto;
+    }
+
+    /* another way  */
+    /* #contact form {
+        width: 60%;
+        margin-left: 20%;
+    } */
+}
+
+#contact input[type="submit"] {
+    background-color: var(--pink);
+    border: 0;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Footer */
+
+footer {
+    padding: 16px;
+    text-align: center;
+}
+
+/* Utilities */
+
+.display-none {
+    display: none;
+}
